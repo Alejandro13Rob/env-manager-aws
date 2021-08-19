@@ -1,7 +1,7 @@
 {
   "name": "@discovery-latam/env-manager-aws",
-  "version": "1.0.0",
-  "description": "Library that allows to configure environment variables in files and to be able to quickly switch between environments using AWS Parameter Store",
+  "version": "0.2.4",
+  "description": "A nice greeter",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
@@ -9,7 +9,7 @@
     "build": "tsc",
     "format": "prettier --write \"src/**/*.ts\"",
     "lint": "tslint -p tsconfig.json",
-    "test": "jest",
+    "test": "jest --config jestconfig.json",
     "prepare": "npm run build",
     "prepublishOnly": "npm test && npm run lint",
     "preversion": "npm run lint",
@@ -18,17 +18,14 @@
     "patch:publish": "npm version patch && npm publish",
     "link": "npm link"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Alejandro13Rob/env-manager-aws.git"
-  },
   "keywords": [
     "AWS",
-    "parameter store",
+    "Parameter Store",
+    "env config",
     "AWS Parameter Store"
   ],
-  "author": "R-M",
-  "license": "MIT",
+  "author": "C-J",
+  "license": "ISC",
   "devDependencies": {
     "@babel/parser": "^7.14.7",
     "@babel/types": "^7.14.5",
@@ -46,9 +43,5 @@
   ],
   "bin": {
     "env-manager": "dist/cli.js"
-  },
-  "bugs": {
-    "url": "https://github.com/Alejandro13Rob/env-manager-aws/issues"
-  },
-  "homepage": "https://github.com/Alejandro13Rob/env-manager-aws#readme"
+  }
 }
