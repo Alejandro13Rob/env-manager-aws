@@ -1,5 +1,5 @@
 {
-  "name": "@discovery-latam/env-manager-aws",
+  "name": "env-manager-aws",
   "version": "1.0.0",
   "description": "A nice greeter",
   "main": "dist/index.js",
