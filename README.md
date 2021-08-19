@@ -58,6 +58,6 @@ node node_modules/env-manager-aws/dist/cli.js configure
 Or run
 
 ```
-run npm run env-manager-aws
+npm run env-manager-aws
 ```
 inside of your project
