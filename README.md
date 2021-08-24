@@ -19,7 +19,7 @@ You need to create a `envconfig.js` file in your root directoy with structure li
 
 ```javascript
 module.exports = {
-  filePath: '.env',
+  filePath: ['.env'],
   enableUpdateDate: false,
   envs: [
     { name: 'development', paths: ['/path/common/', '/path/development'] },
