@@ -59,7 +59,8 @@ export async function configure(params: string[]) {
     }
     console.log(`Environment \"${env.name}\" selected`);
 
-    if (config.filePath.length > 1) { //if it needs a .env and a .json
+    // if it needs a .env and a .json
+    if (config.filePath.length > 1) {
       const parametersResponses = await Promise.all(
         env.paths.map(async (path) => {
           const response = (await fetchParametersByRoute(path)) as string;
@@ -106,7 +107,8 @@ export async function configure(params: string[]) {
       const dateContent = `# [env-manager] automatically updated on ${getDate(new Date())}\n`;
       fs.writeFileSync(config.filePath[0], dateContent.concat(envContent));
       fs.writeFileSync(config.filePath[1], jsonContent);
-    } else { // only one env
+      // only one env
+    } else {
       const parametersResponses = await Promise.all(
         env.paths.map(async (path) => {
           const response = (await fetchParametersByRoute(path)) as string;
