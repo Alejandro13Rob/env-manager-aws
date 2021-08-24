@@ -79,17 +79,17 @@ export async function configure(params: string[]) {
             if (parameter.Value === 'true') {
               const newValue = true;
               jsonContent[name] = newValue;
-              return
+              return;
             } else if (parameter.Value === 'false') {
-              const newValue = false
+              const newValue = false;
               jsonContent[name] = newValue;
-              return
+              return;
             }
             const parsed = Number(parameter.Value);
             if (!isNaN(parsed)) {
               const newValue = parsed;
               jsonContent[name] = newValue;
-              return
+              return;
             }
             jsonContent[name] = parameter.Value;
           } else {
